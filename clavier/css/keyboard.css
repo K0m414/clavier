@@ -1,0 +1,74 @@
+
+h1{
+    text-align: center;
+}
+kbd{
+    font-family: 'Xanh Mono', monospace;
+}
+#clavier{
+    border:1px solid black;
+    padding: 10px;
+    margin:auto;
+    width: 39rem;
+    display: grid;
+    grid-template-columns: repeat(13, 5fr);
+    grid-gap: 4px;
+    text-align: center;
+}
+
+.key{
+    border:1px solid black;
+    width:2.5rem;
+    height: 2.5rem;
+    margin:auto;
+    border-radius: 8px;
+    }
+
+/*ligne 1*/
+
+    .backspace{
+        grid-area: 1 / 12 / 2 / 14;
+        width: 5rem;
+    }
+
+    /*ligne 2*/
+
+    .tab{
+        grid-area: 2 / 1 / 3 / 3;
+        width: 5rem;
+    }
+
+   .enter{
+        grid-area: 2 / 13 / 4 / 14;
+        height: 5rem;
+   }
+
+    /*ligne 3*/
+
+    .capslock{
+        grid-area: 3 / 1 / 4 / 3;
+        width: 5rem;
+    }
+
+    /*ligne 4*/
+
+    .shift1{
+        grid-area: 4 / 1 / 5 / 3;
+        width: 5rem;
+    }
+
+    .shift2{
+        grid-area: 4 / 12 / 5 / 14;
+        width: 5rem;
+    }
+
+        /*ligne 5*/
+
+    .espace{
+        grid-area: 5 / 4 / 6 / 11;
+        width: 20.5rem;
+    }
+
+    .sr-only{
+        display:none;
+    }
