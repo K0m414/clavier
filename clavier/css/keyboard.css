@@ -7,6 +7,7 @@ div{
     text-align: center;
     margin: 2rem;
 }
+
 /*css pour clavier*/
 #keyboard{
     padding: 1rem;
@@ -22,6 +23,7 @@ div{
 
 kbd{
     font-family: 'Xanh Mono', monospace;
+    
 }
 .key{
     width:4.5rem;
