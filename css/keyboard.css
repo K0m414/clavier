@@ -2,25 +2,30 @@
 h1{
     text-align: center;
 }
-kbd{
-    font-family: 'Xanh Mono', monospace;
+
+div{
+    text-align: center;
+    margin: 2rem;
 }
-#clavier{
-    /* border:1px solid black; */
-    padding: 10px;
+/*css pour clavier*/
+#keyboard{
+    padding: 1rem;
     margin:auto;
-    width: 39rem;
+    width: 63.5rem;
+    height: 25rem;
     display: grid;
     grid-template-columns: repeat(13, 5fr);
-    grid-gap: 4px;
+    grid-gap: 0.3rem;
     text-align: center;
     border-radius: 8px;
 }
 
+kbd{
+    font-family: 'Xanh Mono', monospace;
+}
 .key{
-    /* border:1px solid black; */
-    width:2.5rem;
-    height: 2.5rem;
+    width:4.5rem;
+    height: 4.5rem;
     margin:auto;
     border-radius: 8px;
     }
@@ -29,45 +34,45 @@ kbd{
 
     .backspace{
         grid-area: 1 / 12 / 2 / 14;
-        width: 5rem;
+        width: 9rem;
     }
 
     /*ligne 2*/
 
     .tab{
         grid-area: 2 / 1 / 3 / 3;
-        width: 5rem;
+        width: 9rem;
     }
 
    .enter{
         grid-area: 2 / 13 / 4 / 14;
-        height: 5rem;
+        height: 9rem;
    }
 
     /*ligne 3*/
 
     .capslock{
         grid-area: 3 / 1 / 4 / 3;
-        width: 5rem;
+        width: 9rem;
     }
 
     /*ligne 4*/
 
     .shift1{
         grid-area: 4 / 1 / 5 / 3;
-        width: 5rem;
+        width: 9rem;
     }
 
     .shift2{
         grid-area: 4 / 12 / 5 / 14;
-        width: 5rem;
+        width: 9rem;
     }
 
         /*ligne 5*/
 
     .espace{
         grid-area: 5 / 4 / 6 / 11;
-        width: 20.5rem;
+        width: 33rem;
     }
 
     .sr-only{
