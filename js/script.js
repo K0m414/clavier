@@ -23,6 +23,17 @@ let keyFlech = otherElment('.fleche', '\u2039');
 let keyEnter = otherElment('.enter', '\u000A');
 let keyPoint = otherElment('.point', '\u002E');
 
+let keyUn = selectElment('.un');
+let keyDeux = selectElment('.deux');
+let keyTrois = selectElment('.trois');
+let keyQuatre = selectElment('.quatre');
+let keyCinq = selectElment('.cinq');
+let keySIx = selectElment('.six');
+let keySept = selectElment('.sept');
+let keyHuit = selectElment('.huit');
+let keyNeuf = selectElment('.neuf');
+let keyZero = selectElment('.zero');
+
 let keyA = selectElment('.a');
 let keyB = selectElment('.b');
 let keyC = selectElment('.c');
