@@ -1,0 +1,112 @@
+
+h1{
+    text-align: center;
+}
+
+div{
+    text-align: center;
+    margin: 2rem;
+}
+label{
+    display: block;
+    padding: 1.5%;
+}
+textarea {
+    resize: none;
+    width: 800px;
+    height: 100px;
+  }
+.hidden{
+    display: none;
+}
+.visible{
+    display: inline-block
+}
+
+.fa-unlock{
+    padding: 0.5rem;
+}
+
+.maj{
+    text-transform: uppercase;
+}
+/*css pour clavier*/
+
+#keyboard{
+    padding: 1rem;
+    margin:auto;
+    width: 63.5rem;
+    height: 26rem;
+    display: grid;
+    grid-template-columns: repeat(13, 5fr);
+    grid-gap: 0.3rem;
+    text-align: center;
+    border-radius: 8px;
+}
+
+kbd{
+    font-family: 'Xanh Mono', monospace;
+    
+    
+}
+.key{
+    width: 1rem;
+    height: 1rem; 
+    margin: auto;
+    border-radius: 8px;
+    padding: 1.6rem;
+    }
+
+/*ligne 1*/
+
+    .backspace{
+        grid-area: 1 / 12 / 2 / 14;
+        width: 6rem;
+    }
+
+    /*ligne 2*/
+
+    .tab{
+        grid-area: 2 / 1 / 3 / 3;
+        width: 6rem;
+    }
+
+   .enter{
+        grid-area: 2 / 13 / 4 / 14;
+        height: 6rem;
+        width: 2rem;
+   }
+
+    /*ligne 3*/
+    .led{
+        position: absolute;
+        top: 5px;
+        right:5px;
+    }   
+    .capslock{
+        position: relative;
+        grid-area: 3 / 1 / 4 / 3;
+        padding: 1rem 2rem;
+        width: 5rem;
+        height:2.5rem;
+
+    }
+
+    /*ligne 4*/
+
+    .shift1{
+        grid-area: 4 / 1 / 5 / 3;
+        width: 6rem;
+    }
+
+    .shift2{
+        grid-area: 4 / 12 / 5 / 14;
+        width: 6rem;
+    }
+
+        /*ligne 5*/
+
+    .espace{
+        grid-area: 5 / 4 / 6 / 11;
+        width: 30rem;
+    }
