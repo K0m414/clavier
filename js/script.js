@@ -1,5 +1,7 @@
-
+document.addEventListener('DOMContentLoaded', (event) => {
+  console.log('DOM');
 /*variable*/
+
 const modeSwitch = document.querySelector('.mode');
 const lightMode = document.querySelector('.fa-sun-o');
 const darkMode = document.querySelector('.fa-moon-o');
@@ -14,14 +16,15 @@ const ledOff = document.querySelector('.fa-circle-thin');
 const ledOn = document.querySelector('.fa-dot-circle-o');
 const key = document.querySelectorAll('kbd');
 
+const backspace = document.querySelector('.backspace');
 let write = document.querySelector('textarea');
 let kbd;
 
 let keyEspace = otherElment('.espace', ' ');
 let keyFlech = otherElment('.fleche', '\u2039');
-
 let keyEnter = otherElment('.enter', '\u000A');
 let keyPoint = otherElment('.point', '\u002E');
+let keyTab = otherElment('.tab', '\u0009');
 
 let keyUn = selectElment('.un');
 let keyDeux = selectElment('.deux');
@@ -62,9 +65,9 @@ let keyX = selectElment('.x');
 let keyY = selectElment('.y');
 let keyZ = selectElment('.z');
 
-
-// let kbd = document.querySelector('kbd');
-// console.log(kbd)
+arrayMaj = [];
+keyMaj = document.querySelectorAll('kbd');
+// console.log(keyMaj.forEach())
 
 /*event listener*/
 
@@ -84,11 +87,17 @@ modeSwitch.addEventListener('click', event => { //clique sur la touche mode
     }
   });
 
-
+    // Supprimer un caractère
+    backspace.addEventListener('click', () => {
+      let keyBack = write.value.slice(0, write.value.length - 1)
+      // console.log(keyBack)
+      write.value = keyBack
+  })
 
 
 /*pour activer ou désactiver caps lock*/
   capsLock.addEventListener('click', event => {
+
     // console.log('clique maj');
     //verrou
     unlock.classList.toggle('hidden') // cache l'icône en changeant de classe
@@ -97,13 +106,19 @@ modeSwitch.addEventListener('click', event => { //clique sur la touche mode
     //led
     ledOff.classList.toggle('hidden') // cache l'icône en changeant de classe
     ledOn.classList.toggle('visible') //affiche l'icône en changeant de classe
+
     /*Mettre en maj*/
-    let keyMaj = document.querySelector('.a'); // a revoir
-    console.log(keyMaj)
-    keyMaj.classList.toggle('maj')
+     keyMaj.forEach(element => element.classList.toggle('maj'))
+    // keyMaj.forEach(element => console.log(element))
+    
   });
 
 /*fonction */
+
+/*en maj*/
+function toUpper(text){
+  return text.toUpperCase()
+}
   function changerDeStyle(sheet){
     link.setAttribute('href', sheet);
     // console.log(link)    
@@ -113,7 +128,7 @@ modeSwitch.addEventListener('click', event => { //clique sur la touche mode
   function selectElment(className){
 
     kbd = document.querySelector(className);
-    
+    // innerText applies text-transform and white-space rules
     let touchName = kbd.innerText;
 
     kbd.addEventListener('click', event => {
@@ -127,15 +142,17 @@ modeSwitch.addEventListener('click', event => { //clique sur la touche mode
     // console.log(touchName)
     })
   }
+
+
   function otherElment(className, elementValue){
 
     kbd = document.querySelector(className);
-    
-
     kbd.addEventListener('click', event => {
-      
         write.value += elementValue
-    
-    console.log(elementValue)
+    // console.log(elementValue)
     })
   }
+
+
+});
+

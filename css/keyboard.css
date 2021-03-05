@@ -16,6 +16,7 @@ textarea {
     width: 800px;
     height: 100px;
   }
+
 .hidden{
     display: none;
 }
@@ -28,6 +29,10 @@ textarea {
 }
 
 .maj{
+    text-transform: uppercase;
+}
+
+.maj-def{
     text-transform: uppercase;
 }
 /*css pour clavier*/
