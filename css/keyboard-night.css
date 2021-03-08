@@ -4,6 +4,11 @@ body{
     text-shadow: 1px 1px 2px rgb(109, 130, 252);
 }
 
+div textarea{
+    background-color: gray;
+    color:honeydew;
+}
+
 #keyboard{
     background-color:  #161675;
     border:1px solid rgb(163, 151, 151);

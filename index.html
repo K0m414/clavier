@@ -10,88 +10,95 @@
         
 
         <link rel="stylesheet" href="css/keyboard.css" type="text/css">
-        <link rel="stylesheet" href="css/keyboard-light.css" type="text/css">
+        <link id="page-style" rel="stylesheet" href="css/keyboard-light.css" type="text/css">
         <!-- <link rel="stylesheet" href="css\keyboard-night.css" type="text/css"> -->
         
         <title>Clavier virtuel</title>
     </head>
-
+<hr>
     <body>
         <h1>Clavier virtuel</h1>
             <div>
                 <label for="text">écrivez </label>
-                <input type="text" id="text" name="text" placeholder="quelque chose">
+                <textarea type="text" id="text" name="text" placeholder="quelque chose"></textarea>
+                <p></p>
             </div>
             <article id="keyboard">
 
-                <kbd class="key">Echap</kbd>
-                <kbd class="key">1</kbd>
-                <kbd class="key">2</kbd>
-                <kbd class="key">3</kbd>
-                <kbd class="key">4</kbd>
-                <kbd class="key">5</kbd>
-                <kbd class="key">6</kbd>
-                <kbd class="key">7</kbd>
-                <kbd class="key">8</kbd>
-                <kbd class="key">9</kbd>
-                <kbd class="key">0</kbd>
-                <kbd class="key backspace">backspace</kbd>
+                <kbd class="key maj-def esc">esc</kbd>
+                <kbd class="key un">1</kbd>
+                <kbd class="key deux">2</kbd>
+                <kbd class="key trois">3</kbd>
+                <kbd class="key quatre">4</kbd>
+                <kbd class="key cinq">5</kbd>
+                <kbd class="key six">6</kbd>
+                <kbd class="key sept">7</kbd>
+                <kbd class="key huit">8</kbd>
+                <kbd class="key neuf">9</kbd>
+                <kbd class="key zero">0</kbd>
+                <kbd class="key maj-def backspace">backspace</kbd>
 
-                <kbd class="key tab">tab</kbd>
-                <kbd class="key">a</kbd>
-                <kbd class="key">z</kbd>
-                <kbd class="key">e</kbd>
-                <kbd class="key">r</kbd>
-                <kbd class="key">t</kbd>
-                <kbd class="key">y</kbd>
-                <kbd class="key">u</kbd>
-                <kbd class="key">i</kbd>
-                <kbd class="key">o</kbd>
-                <kbd class="key">p</kbd>
+                <kbd class="key maj-def tab">tab</kbd>
+                <kbd class="key a">a</kbd>
+                <kbd class="key z">z</kbd>
+                <kbd class="key e">e</kbd>
+                <kbd class="key r">r</kbd>
+                <kbd class="key t">t</kbd>
+                <kbd class="key y">y</kbd>
+                <kbd class="key u">u</kbd>
+                <kbd class="key i">i</kbd>
+                <kbd class="key o">o</kbd>
+                <kbd class="key p">p</kbd>
 
-                <kbd class="key capslock">caps lock</kbd>
-                <kbd class="key">q</kbd>
-                <kbd class="key">s</kbd>
-                <kbd class="key">d</kbd>
-                <kbd class="key">f</kbd>
-                <kbd class="key">g</kbd>
-                <kbd class="key">h</kbd>
-                <kbd class="key">j</kbd>
-                <kbd class="key">k</kbd>
-                <kbd class="key">l</kbd>
-                <kbd class="key">m</kbd>
-                <kbd class="key enter">enter</kbd>
-
-                <kbd class="key shift1">shift</kbd>
-                <kbd class="key">&#x27E8;</kbd>
-                <kbd class="key">w</kbd>
-                <kbd class="key">x</kbd>
-                <kbd class="key">c</kbd>
-                <kbd class="key">v</kbd>
-                <kbd class="key">b</kbd>
-                <kbd class="key">n</kbd>
-                <kbd class="key">.</kbd>
-                <kbd class="key">del</kbd>
-                <kbd class="key shift2">shift</kbd>
-
-                <kbd class="key ctrl1">ctrl</kbd>
-                <kbd class="key windows"><i class="fa fa-windows"></i></kbd>
-                <kbd class="key alt">alt</kbd>
-                <kbd class="key espace">espace</kbd>
-                <kbd class="key altgr">alt gr</kbd>
-                <kbd class="key mode">
-                    <label class="sr-only" for="checkBox">activer le mode nuit</label>
-                    <input type="checkbox" id="checkBox" >
+                <kbd class="key maj-def capslock">
+                    <i class="fa fa-lock hidden"></i>
+                    <i class="fa fa-unlock"></i>verr. maj.
+                <i class="fa fa-circle-thin led"></i>
+                <i class="fa fa-dot-circle-o hidden led"></i>
                 </kbd>
-                <kbd class="key ctrl2">ctrl</kbd>
+                
+                <kbd class="key q">q</kbd>
+                <kbd class="key s">s</kbd>
+                <kbd class="key d">d</kbd>
+                <kbd class="key f">f</kbd>
+                <kbd class="key g">g</kbd>
+                <kbd class="key h">h</kbd>
+                <kbd class="key j">j</kbd>
+                <kbd class="key k">k</kbd>
+                <kbd class="key l">l</kbd>
+                <kbd class="key m">m</kbd>
+                <kbd class="key maj-def enter">entrée</kbd>
+
+                <kbd class="key maj-def shift1">shift</kbd>
+                <kbd class="key maj-def fleche">&#x27E8;</kbd>
+                <kbd class="key w">w</kbd>
+                <kbd class="key x">x</kbd>
+                <kbd class="key c">c</kbd>
+                <kbd class="key v">v</kbd>
+                <kbd class="key b">b</kbd>
+                <kbd class="key n">n</kbd>
+                <kbd class="key maj-def point">.</kbd>
+                <kbd class="key maj-def del">del</kbd>
+                <kbd class="key maj-def shift2">shift</kbd>
+
+                <kbd class="key maj-def ctrl1">ctrl</kbd>
+                <kbd class="key maj-def windows"><i class="fa fa-windows"></i></kbd>
+                <kbd class="key maj-def alt">alt</kbd>
+                <kbd class="key maj-def espace">espace</kbd>
+                <kbd class="key maj-def altgr">alt gr</kbd>
+                <kbd class="key maj-def mode">
+                    <i class="fa fa-sun-o"></i>
+                    <i class="fa fa-moon-o hidden"></i>
+                </kbd>
+                <kbd class="key maj-def ctrl2">ctrl</kbd>
 
             </article>
         <!--fin du clavier-->
         <!-- JS -->
-        <!--
-            <script src="https://code.jquery.com/jquery-2.1.0.min.js"></script>
+
+            
             <script src="js/script.js"></script> 
-        -->
+
 
     </body>
     </html>
