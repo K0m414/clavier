@@ -1,3 +1,4 @@
+'use strict';
 document.addEventListener('DOMContentLoaded', (event) => {
   console.log('DOM');
 /*variable*/
@@ -19,6 +20,8 @@ const key = document.querySelectorAll('kbd');
 const backspace = document.querySelector('.backspace');
 let write = document.querySelector('textarea');
 let kbd;
+
+let keyMaj = document.querySelectorAll('kbd');
 
 let keyEspace = otherElment('.espace', ' ');
 let keyFlech = otherElment('.fleche', '\u2039');
@@ -65,8 +68,7 @@ let keyX = selectElment('.x');
 let keyY = selectElment('.y');
 let keyZ = selectElment('.z');
 
-arrayMaj = [];
-keyMaj = document.querySelectorAll('kbd');
+
 // console.log(keyMaj.forEach())
 
 /*event listener*/
@@ -89,7 +91,7 @@ modeSwitch.addEventListener('click', event => { //clique sur la touche mode
 
     // Supprimer un caractère
     backspace.addEventListener('click', () => {
-      let keyBack = write.value.slice(0, write.value.length - 1)
+      let keyBack = write.value.slice(0, write.value.length - 1);
       // console.log(keyBack)
       write.value = keyBack
   })
@@ -97,19 +99,21 @@ modeSwitch.addEventListener('click', event => { //clique sur la touche mode
 
 /*pour activer ou désactiver caps lock*/
   capsLock.addEventListener('click', event => {
-
+      
     // console.log('clique maj');
     //verrou
-    unlock.classList.toggle('hidden') // cache l'icône en changeant de classe
+    unlock.classList.toggle('hidden'); // cache l'icône en changeant de classe
     // unlock.classList.add('fgd')
-    lock.classList.toggle('visible') //affiche l'icône en changeant de classe
+    lock.classList.toggle('visible'); //affiche l'icône en changeant de classe
     //led
-    ledOff.classList.toggle('hidden') // cache l'icône en changeant de classe
-    ledOn.classList.toggle('visible') //affiche l'icône en changeant de classe
+    ledOff.classList.toggle('hidden'); // cache l'icône en changeant de classe
+    ledOn.classList.toggle('visible'); //affiche l'icône en changeant de classe
 
     /*Mettre en maj*/
-     keyMaj.forEach(element => element.classList.toggle('maj'))
-    // keyMaj.forEach(element => console.log(element))
+
+
+    keyMaj.forEach(element => element.classList.toggle('maj'))
+    // keyMaj.forEach(element => console.log(element.innerText))
     
   });
 
