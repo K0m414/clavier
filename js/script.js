@@ -25,40 +25,15 @@ const lettre = document.querySelectorAll('.lettre');
 const key = document.querySelectorAll('kbd');
 let kbd;
 
-
-lettre.forEach(function(element){
-  selectElment('.a');
-    console.log(element.innerHTML)
-});
 /*lettre*/
-selectElment('.a');
-selectElment('.b');
-selectElment('.c');
-selectElment('.d');
-selectElment('.e');
-selectElment('.f');
-selectElment('.g');
-selectElment('.h');
-selectElment('.i');
-selectElment('.j');
-selectElment('.k');
-selectElment('.l');
-selectElment('.m');
-
-selectElment('.n');
-selectElment('.o');
-selectElment('.p');
-selectElment('.q');
-selectElment('.r');
-selectElment('.s');
-selectElment('.t');
-selectElment('.u');
-selectElment('.v');
-selectElment('.w');
-selectElment('.x');
-selectElment('.y');
-selectElment('.z');
-
+lettre.forEach(function(element){
+  letterElment(element.id,element.innerHTML);
+    // console.log(element.id)
+    capsLock.addEventListener('click', event => {
+      element.innerHTML.toUpperCase()
+      // console.log(element.innerHTML.toUpperCase())
+  });
+});
 /*autre */
 otherElment('.espace', ' ');
 otherElment('.fleche', '\u2039');
@@ -130,11 +105,10 @@ modeSwitch.addEventListener('click', event => { //clique sur la touche mode
     ledOn.classList.toggle('visible'); //affiche l'icône en changeant de classe
 
     /*Mettre en maj*/
-    key.forEach(function(element){
+    lettre.forEach(function(element){
       element.classList.toggle('maj')
-        // console.log(element.innerText)
+       console.log(element.innerText)
     });
-
   });
   
 /*fonction */
@@ -154,7 +128,6 @@ function toUpper(text){
     kbd = document.querySelector(className); // selectionne la class 
     let toucheName = kbd.innerText; //selection l'element dans la touche = innerText
     // mettre en maj => toucheName = toUpper(kbd.innerText);
-  
     kbd.addEventListener('click', event => { // event listener au click  
         write.value +=toucheName //ecrit l'element selectionné sur le texterea
     console.log(toucheName)
@@ -165,10 +138,15 @@ function toUpper(text){
     kbd = document.querySelector(className);// selectionne la class 
     kbd.addEventListener('click', event => {
         write.value += elementValue //ecrit la valeur selectionné sur le texterea
-    // console.log(elementValue)
     })
   }
 
+  function letterElment(IDName, elementValue){// fonction avec deux valeurs l'ID et la valeur
+    kbd = document.getElementById(IDName);// selectionne l'ID  
+    kbd.addEventListener('click', event => {
+        write.value += elementValue //ecrit la valeur selectionné sur le texterea
+    })
+  }
 
 });
 
