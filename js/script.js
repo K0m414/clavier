@@ -22,18 +22,19 @@ const del = document.querySelector('.del');
 const shift1 = document.querySelector('.shift1');
 const shift2 = document.querySelector('.shift2');
 const lettre = document.querySelectorAll('.lettre');
+const chiffre = document.querySelectorAll('.chiffre');
 const key = document.querySelectorAll('kbd');
 let kbd;
-
+let toUpperCase = false;
+shift2.addEventListener('DOMContentLoaded', (event) => {
+  console.log('dhgfgh');
+});
 /*lettre*/
 lettre.forEach(function(element){
   letterElment(element.id,element.innerHTML);
-    // console.log(element.id)
-    capsLock.addEventListener('click', event => {
-      element.innerHTML.toUpperCase()
-      // console.log(element.innerHTML.toUpperCase())
+    console.log(toUpperCase)
   });
-});
+
 /*autre */
 otherElment('.espace', ' ');
 otherElment('.fleche', '\u2039');
@@ -95,22 +96,37 @@ modeSwitch.addEventListener('click', event => { //clique sur la touche mode
 
 /*pour activer ou désactiver caps lock*/
   capsLock.addEventListener('click', event => {
-
     //verrou
     unlock.classList.toggle('hidden'); // cache l'icône en changeant de classe
     lock.classList.toggle('visible'); //affiche l'icône en changeant de classe
-    
     //led
     ledOff.classList.toggle('hidden'); // cache l'icône en changeant de classe
     ledOn.classList.toggle('visible'); //affiche l'icône en changeant de classe
-
     /*Mettre en maj*/
     lettre.forEach(function(element){
-      element.classList.toggle('maj')
-       console.log(element.innerText)
+    element.classList.toggle('maj')
     });
+
+    if(toUpperCase===false){
+      toUpperCase = true;
+      lettre.forEach(function(element){
+        letterElment(element.id,element.innerHTML.toUpperCase());
+        });
+        console.log(toUpperCase)
+    }
+    else{
+      toUpperCase = false;
+      console.log(toUpperCase)
+      lettre.forEach(function(element){
+        letterElment(element.id,element.innerHTML.toLowerCase());
+        });
+    }
   });
-  
+  //shift
+    // shift1.addEventListener('click', event => { //clique sur la touche 
+  //   console.log('clique');
+
+  // });
 /*fonction */
 
 /*en maj*/
@@ -140,11 +156,12 @@ function toUpper(text){
         write.value += elementValue //ecrit la valeur selectionné sur le texterea
     })
   }
-
+    
   function letterElment(IDName, elementValue){// fonction avec deux valeurs l'ID et la valeur
     kbd = document.getElementById(IDName);// selectionne l'ID  
     kbd.addEventListener('click', event => {
-        write.value += elementValue //ecrit la valeur selectionné sur le texterea
+        write.value += elementValue.substr(0, 1) //ecrit la valeur selectionné sur le texterea
+        console.log(elementValue.substr(0, 1))
     })
   }
 
