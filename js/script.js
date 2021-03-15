@@ -26,9 +26,7 @@ const chiffre = document.querySelectorAll('.chiffre');
 const key = document.querySelectorAll('kbd');
 let kbd;
 let toUpperCase = false;
-shift2.addEventListener('DOMContentLoaded', (event) => {
-  console.log('dhgfgh');
-});
+
 /*lettre*/
 lettre.forEach(function(element){
   letterElment(element.id,element.innerHTML);
@@ -112,7 +110,7 @@ modeSwitch.addEventListener('click', event => { //clique sur la touche mode
       lettre.forEach(function(element){
         letterElment(element.id,element.innerHTML.toUpperCase());
         });
-        console.log(toUpperCase)
+        
     }
     else{
       toUpperCase = false;
