@@ -26,14 +26,29 @@ const chiffre = document.querySelectorAll('.chiffre');
 const key = document.querySelectorAll('kbd');
 let kbd;
 let toUpperCase = false;
-
+let value; 
 /*lettre*/
 lettre.forEach(function(element){
   letterElment(element.id,element.innerHTML);
     console.log(toUpperCase)
   });
+  // let jsp = document.getElementById('a');// selectionne l'ID 
+  // let valueLetter = a.innerHTML.toLowerCase();
+  // if(toUpperCase === true){
+  //   let valueLetter = a.innerHTML.toUpperCase();
+  //   console.log('maj')
+  // }
 
-/*autre */
+  // jsp.addEventListener('click', event => {
+  //   valueLetter = a.innerHTML.toUpperCase();
+  //     write.value += valueLetter.substr(0, 1) //ecrit la valeur selectionné sur le texterea
+  //     console.log(valueLetter)
+  //   });
+
+ 
+
+ 
+// /*autre */
 otherElment('.espace', ' ');
 otherElment('.fleche', '\u2039');
 otherElment('.fleche2', '\u203a ');
@@ -58,8 +73,6 @@ selectElment('.huit');
 selectElment('.neuf');
 selectElment('.zero');
 
-
-
 /*event listener*/
 
 //pour activer ou désactiver le mode nuit
@@ -77,7 +90,7 @@ modeSwitch.addEventListener('click', event => { //clique sur la touche mode
       // console.log(link.href === sheet) 
     }
   });
-
+  
     // Supprimer un caractère
     backspace.addEventListener('click', () => {
       let keyBack = write.value.slice(0, write.value.length - 1);
@@ -107,17 +120,9 @@ modeSwitch.addEventListener('click', event => { //clique sur la touche mode
 
     if(toUpperCase===false){
       toUpperCase = true;
-      lettre.forEach(function(element){
-        letterElment(element.id,element.innerHTML.toUpperCase());
-        });
-        
     }
     else{
       toUpperCase = false;
-      console.log(toUpperCase)
-      lettre.forEach(function(element){
-        letterElment(element.id,element.innerHTML.toLowerCase());
-        });
     }
   });
   //shift
@@ -125,6 +130,7 @@ modeSwitch.addEventListener('click', event => { //clique sur la touche mode
   //   console.log('clique');
 
   // });
+
 /*fonction */
 
 /*en maj*/
@@ -155,11 +161,13 @@ function toUpper(text){
     })
   }
     
-  function letterElment(IDName, elementValue){// fonction avec deux valeurs l'ID et la valeur
+  function letterElment(IDName, elementValue,e){// fonction avec deux valeurs l'ID et la valeur
+  e.preventDefault();
     kbd = document.getElementById(IDName);// selectionne l'ID  
+    let valueLetter = elementValue;
     kbd.addEventListener('click', event => {
-        write.value += elementValue.substr(0, 1) //ecrit la valeur selectionné sur le texterea
-        console.log(elementValue.substr(0, 1))
+        write.value += valueLetter.substr(0, 1) //ecrit la valeur selectionné sur le texterea
+        console.log(valueLetter)
     })
   }
 
