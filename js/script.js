@@ -69,23 +69,23 @@ let keyY = selectElment('.y');
 let keyZ = selectElment('.z');
 
 
-// console.log(keyMaj.forEach())
+console.log('fgfdlkjg')
 
 /*event listener*/
 
 //pour activer ou désactiver le mode nuit
-modeSwitch.addEventListener('click', event => { //clique sur la touche mode 
+modeSwitch.addEventListener('click', event => { //clique sur la touche mode
     // console.log('clique mode');
     lightMode.classList.toggle('hidden'); // cache l'icône en changeant de classe
     darkMode.classList.toggle('visible'); //affiche l'icône en changeant de classe
-    // si le href de link est === à nightSheet 
+    // si le href de link est === à nightSheet
     if(link.href === nightSheet){
       changerDeStyle(lightSheet); //fonction va afficher lightSheet
     }
     // sinon fonction va afficher nightSheet
     else{
       changerDeStyle(nightSheet);
-      // console.log(link.href === sheet) 
+      // console.log(link.href === sheet)
     }
   });
 
@@ -99,7 +99,7 @@ modeSwitch.addEventListener('click', event => { //clique sur la touche mode
 
 /*pour activer ou désactiver caps lock*/
   capsLock.addEventListener('click', event => {
-      
+
     // console.log('clique maj');
     //verrou
     unlock.classList.toggle('hidden'); // cache l'icône en changeant de classe
@@ -114,7 +114,7 @@ modeSwitch.addEventListener('click', event => { //clique sur la touche mode
 
     keyMaj.forEach(element => element.classList.toggle('maj'))
     // keyMaj.forEach(element => console.log(element.innerText))
-    
+
   });
 
 /*fonction */
@@ -125,7 +125,7 @@ function toUpper(text){
 }
   function changerDeStyle(sheet){
     link.setAttribute('href', sheet);
-    // console.log(link)    
+    // console.log(link)
   }
 
 // function qui permet de choisir la touche a écrire
@@ -142,7 +142,7 @@ function toUpper(text){
       else{
         write.value +=touchName
       }
-    
+
     // console.log(touchName)
     })
   }
