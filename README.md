@@ -1,5 +1,3 @@
-exercice clavier virtuel
+https://k0m414.github.io/clavier/
 
 
-
-https://komala-kadhiravan.000webhostapp.com/
